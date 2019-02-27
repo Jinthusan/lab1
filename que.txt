@@ -1,0 +1,15 @@
+###Excersise 01
+
+Let's create a function as a variable (function expression) that prints ‘Hello World’ to console and another function which accepts a variable. The argument passed to the second function will be executed as a function inside the body. The second function passes the first function as the argument as follows.
+
+        var x = function(){
+            console.log('Hello World')
+        }
+
+        var y = function(variable){
+            return variable();
+        }
+
+        y(x);
+    
+---
