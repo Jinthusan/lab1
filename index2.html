@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var name ="David";
+
+    function printName() {
+        console.log(this.name);
+    }
+    printName();
+
+    var user = {
+        name:"Peter",
+        getName:function () {
+            return function () {
+                console.log(this.name);
+            }
+        }
+    };
+    console.log(this);
+
+    var execute =user.getName();
+    //execute.call(user);
+    var boundedExecution = execute.bind(user);
+    boundedExecution();
+
+</script>
+</body>
+</html>

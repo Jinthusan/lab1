@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture2</title>
+</head>
+<body>
+<script>
+    //class and Objects
+    function Vehicle() {
+        this.type='bmw';
+        this.noOfTyre=4;
+        //this.getType=function(){
+          //  return this.type;
+       // }
+    }
+    Vehicle.prototype.getType=function(){
+        return this.type;
+    }
+    Vehicle.prototype.getnoOfType=function(){
+        return this.noOfTyre;
+    }
+    var vehicle=new Vehicle();
+    console.log(vehicle.getType());
+    console.log(vehicle.getnoOfType());
+
+    //Inheritence
+    function Car(){
+        Vehicle.call(this);
+
+    }
+    Car.prototype=object.create(Vehicle.prototype);
+    Car.prototype.constructor=Car;
+    var car=new Car();
+    console.log(car);
+   // console.log(car.getnoOfType());
+</script>
+</body>
+</html>
